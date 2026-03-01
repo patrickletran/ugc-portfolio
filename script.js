@@ -53,16 +53,6 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach(section => observer.observe(section));
 
-// --- Pause other videos when one starts playing ---
-const videos = document.querySelectorAll('video');
-videos.forEach(video => {
-  video.addEventListener('play', () => {
-    videos.forEach(other => {
-      if (other !== video) other.pause();
-    });
-  });
-});
-
 // --- Auto-update footer year ---
 const yearEl = document.getElementById('year');
 if (yearEl) {

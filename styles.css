@@ -199,15 +199,39 @@ ul {
   justify-content: center;
 }
 
+.polaroid {
+  background: #fff;
+  padding: 14px 14px 60px 14px;
+  box-shadow:
+    0 6px 24px rgba(16, 15, 13, 0.18),
+    0 2px 6px rgba(16, 15, 13, 0.1);
+  transform: rotate(-2deg);
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg);
+}
+
+.polaroid-label {
+  font-family: 'Caveat', cursive;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding-top: 4px;
+  line-height: 1;
+}
+
 .hero-photo {
   width: 100%;
-  max-width: 420px;
-  height: 520px;
+  max-width: 380px;
+  height: 480px;
   object-fit: cover;
   object-position: center 20%;
-  border-radius: var(--radius);
-  border: 6px solid var(--beige);
-  box-shadow: 0 20px 60px rgba(16, 15, 13, 0.12);
+  display: block;
 }
 
 .photo-placeholder {
@@ -829,11 +853,9 @@ footer {
     order: -1;
   }
 
-  .hero-photo,
-  .photo-placeholder {
-    max-width: 320px;
-    height: 400px;
-    margin: 0 auto;
+  .hero-photo {
+    max-width: 280px;
+    height: 360px;
   }
 
   /* Video grid */
@@ -848,10 +870,9 @@ footer {
    RESPONSIVE — Small mobile (≤480px)
    ============================================================ */
 @media (max-width: 480px) {
-  .hero-photo,
-  .photo-placeholder {
-    max-width: 280px;
-    height: 360px;
+  .hero-photo {
+    max-width: 240px;
+    height: 320px;
   }
 
   .hero-ctas {
